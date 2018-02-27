@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Fade } from 'reactstrap';
+import { Container, Fade, Row, Col } from 'reactstrap';
 
 class App extends Component {
     constructor (props) {
@@ -44,15 +44,13 @@ class App extends Component {
      })
      console.table(this.state);
     return (
-      <div className="App">
-            <div key={this.state.currentScreen}>
+      <div className='con-one' key={this.state.currentScreen}>
+        <Fade in={this.state.fadeIn} tag="div" timeout={300}>
+            {screens[this.state.currentScreen]}
+        </Fade>
+        <button onClick={ this.handleScreens }>Change</button>
+     </div>
 
-                <Fade in={this.state.fadeIn} tag="div" timeout={300}>
-                    {screens[this.state.currentScreen]}
-                </Fade>
-            </div>
-            <button onClick={ this.handleScreens }>Change</button>
-      </div>
     );
   }
 }
