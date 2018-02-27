@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Fade } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            videoURLS: ['http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4', 'http://techslides.com/demos/sample-videos/small.mp4'],
+            videoURLS: ['https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/2150/8/210752478/722779149.mp4?token=1519783937-0xada4d9f44fdd9bf0728f74ba736c3e0710452eeb', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://pixabay.com/en/videos/download/video-6395_medium.mp4'],
             currentScreen: 0,
             fadeIn: true
         }
@@ -20,23 +22,20 @@ class App extends Component {
         });
     }
 
-    handleScreens(){
-        if(this.state.currentScreen === 0){
-            this.setState({
-                currentScreen: this.state.currentScreen + 1
-            })
-        }else{
-            this.setState({
-                currentScreen: this.state.currentScreen - 1
-            })
-        }
+    handleScreens(ev){
+        ev.preventDefault();
+        const name = ev.target.name;
+
+        this.setState({
+            currentScreen: parseInt([name], 10)
+        })
         this.toggle;
     }
 
   render() {
      let screens = this.state.videoURLS.map((url) => {
         return (
-            <video className="background-video" loop autoPlay >
+            <video className="background-video" loop autoPlay muted>
                 <source src={url} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -45,13 +44,18 @@ class App extends Component {
      console.table(this.state);
     return (
       <div className="App">
+            <div className="Menu">
+                <button name='0' onClick={ this.handleScreens } style={{'borderTop': 'none'}}>Client Work</button>
+                <button name='1' onClick={ this.handleScreens }>Consulting</button>
+                <button name='2' onClick={ this.handleScreens }>In House</button>
+            </div>
             <div key={this.state.currentScreen}>
-
-                <Fade in={this.state.fadeIn} tag="div" timeout={300}>
+                <Fade in={this.state.fadeIn} tag="div" timeout={250}>
                     {screens[this.state.currentScreen]}
                 </Fade>
             </div>
-            <button onClick={ this.handleScreens }>Change</button>
+
+
       </div>
     );
   }

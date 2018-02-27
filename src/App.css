@@ -10,8 +10,24 @@
 }
 
 button {
+    border-radius: 0;
     z-index: 3;
-    border: 2px solid red;
+    left: 0;
+    display: block;
+    background-color: #6b579d;
+    border-top: 1px solid white;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    width: 250px;
+    height: 60px;
+}
+
+.Menu {
+    background-color: #6b579d;
+    z-index: 3;
     position: fixed;
     left: 0;
+    top: 0;
+    border-left: none;
 }
