@@ -36,7 +36,7 @@ class App extends Component {
   render() {
      let screens = this.state.videoURLS.map((url) => {
         return (
-            <video className="background-video" loop autoPlay >
+            <video className="vid" loop autoPlay >
                 <source src={url} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -44,11 +44,14 @@ class App extends Component {
      })
      console.table(this.state);
     return (
-      <div className='con-one' key={this.state.currentScreen}>
+      <div className='temp' key={this.state.currentScreen}>
+        <div className='inner-bg'>
         <Fade in={this.state.fadeIn} tag="div" timeout={300}>
             {screens[this.state.currentScreen]}
         </Fade>
-        <button onClick={ this.handleScreens }>Change</button>
+      </div>
+      <button onClick={ this.handleScreens }>Change</button>
+
      </div>
 
     );
