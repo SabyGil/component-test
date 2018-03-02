@@ -22,16 +22,13 @@ class App extends Component {
         });
     }
 
-    handleScreens(){
-        if(this.state.currentScreen === 0){
-            this.setState({
-                currentScreen: this.state.currentScreen + 1
-            })
-        }else{
-            this.setState({
-                currentScreen: this.state.currentScreen - 1
-            })
-        }
+    handleScreens(ev){
+        ev.preventDefault();
+        const name = ev.target.name;
+
+        this.setState({
+            currentScreen: parseInt([name], 10)
+        })
         this.toggle;
     }
 
