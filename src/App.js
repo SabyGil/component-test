@@ -8,7 +8,7 @@ class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            videoURLS: ['https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/2150/8/210752478/722779149.mp4?token=1519783937-0xada4d9f44fdd9bf0728f74ba736c3e0710452eeb', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://pixabay.com/en/videos/download/video-6395_medium.mp4'],
+            videoURLS: ['https://pixabay.com/en/videos/download/video-4741_medium.mp4', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://pixabay.com/en/videos/download/video-6395_medium.mp4'],
             currentScreen: 0,
             fadeIn: true
         }
@@ -50,7 +50,7 @@ class App extends Component {
                 <button name='2' onClick={ this.handleScreens }>In House</button>
             </div>
             <div key={this.state.currentScreen}>
-                <Fade in={this.state.fadeIn} tag="div" timeout={250}>
+                <Fade in={this.state.fadeIn} tag="div" timeout={300}>
                     {screens[this.state.currentScreen]}
                 </Fade>
             </div>
