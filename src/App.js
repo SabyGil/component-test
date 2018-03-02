@@ -8,7 +8,7 @@ class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-          videoURLS: ['https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/2010/9/235051444/835557002.mp4?token=1519997806-0x7537e413cacc026847fc9e6baa7f30a86e2d4975', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/561/9/227807749/801681914.mp4?token=1519998033-0xfcf482320e2ec50482d5adbf2913c012a4b201d8'],
+          videoURLS: ['https://pixabay.com/en/videos/download/video-4741_medium.mp4', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://pixabay.com/en/videos/download/video-6395_medium.mp4'],
           currentScreen: 0,
           fadeIn: true
         }
