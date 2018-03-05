@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 // import { Container, Fade, Row, Col } from 'reactstrap';
-import { Fade, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Fade } from 'reactstrap';
 
 class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-          videoURLS: ['https://pixabay.com/en/videos/download/video-4741_medium.mp4', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://pixabay.com/en/videos/download/video-6395_medium.mp4'],
+          videoURLS: ['https://pixabay.com/en/videos/download/video-4741_medium.mp4', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://pixabay.com/en/videos/download/video-4741_medium.mp4', 'https://pixabay.com/en/videos/download/video-6395_medium.mp4'],
           currentScreen: 0,
           fadeIn: true
         }
@@ -23,6 +22,7 @@ class App extends Component {
     }
 
     handleScreens(ev){
+        this.toggle;
         ev.preventDefault();
         const name = ev.target.name;
 
@@ -45,18 +45,15 @@ class App extends Component {
     return (
         <div>
           <div className="menu test-btn-container bounds bounds-wide">
-              <button name='0' onClick={ this.handleScreens } style={{'borderTop': 'none'}}>Client Work</button>
-              <button name='1' onClick={ this.handleScreens }>Consulting</button>
-              <button name='2' onClick={ this.handleScreens }>In House</button>
+              <button name='0' onClick={ this.handleScreens }>718 Digital</button>
+              <button name='1' onClick={ this.handleScreens } style={{'borderTop': 'none'}}>Client Work</button>
+              <button name='2' onClick={ this.handleScreens }>Consulting</button>
+              <button name='3' onClick={ this.handleScreens }>In House</button>
           </div>
         <div className='temp vid' key={this.state.currentScreen}>
-          <Fade in={this.state.fadeIn} tag="fade-div" timeout={300}>
+          <Fade in={this.state.fadeIn} tag="fade-div" timeout={150} addEndListener={this.toggle}>
               {screens[this.state.currentScreen]}
           </Fade>
-          {/* <div className='test-btn-container bounds bounds-wide'>
-            <h1>hello</h1>
-            <button onClick={ this.handleScreens }>Change</button>
-          </div> */}
        </div>
      </div>
     );
