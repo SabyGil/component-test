@@ -3,7 +3,7 @@ import React from 'react';
 
 const ScreenTwo = () => {
   return (
-    <div className=''>
+    <div className='bg-two'>
       <h1>screenTwo</h1>
 
   </div>

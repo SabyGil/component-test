@@ -24,43 +24,40 @@ class App extends Component {
         });
     }
 
-    handleScreens(ev){
+    handleScreens(x){
         this.toggle;
-        ev.preventDefault();
-        const name = ev.target.name;
-
         this.setState({
-            currentScreen: parseInt([name], 10)
+            currentScreen: x
         })
         this.toggle;
     }
 
     renderComponent(){
-      let display = [<ScreenOne/>, <ScreenTwo />, 4];
-      console.log(display[0]);
-    //     switch (this.display) {
-    //         case 1:
-    //           return (
-    //             <ScreenOne />
-    //           );
-    //         default:
-    //           console.log('not working');
-    //     }
-    // }
-    // if(display[1]){
-    //   return (
-    //     <ScreenOne />
-    //   );
-    // }
-    if(display[2]){
+    if(this.state.currentScreen === 0){
+      return (
+        <ScreenOne />
+      );
+    }
+    if(this.state.currentScreen === 1){
       return (
         <ScreenTwo />
       );
     }
   }
+  //     switch (this.display) {
+  //         case 1:
+  //           return (
+  //             <ScreenOne />
+  //           );
+  //         default:
+  //           console.log('not working');
+  //     }
+  // }
   render() {
+    console.log(this.state)
     // let display = [<ScreenOne/>,<ScreenTwo/>, <ScreenThree/>];
-    let display = [<ScreenOne/>];
+    // let display = [<ScreenOne/>, <ScreenTwo />, 4];
+    // console.log(display[1]);
     // let newScreens = display.map((screen, index) => {
     //   return
     // })
@@ -77,10 +74,10 @@ class App extends Component {
     return (
         <div>
           <div className="menu test-btn-container bounds bounds-wide">
-              <button name='0' onClick={ this.handleScreens }>718 Digital</button>
-              <button name='1' onClick={ this.handleScreens } style={{'borderTop': 'none'}}>Client Work</button>
-              <button name='2' onClick={ this.handleScreens }>Consulting</button>
-              <button name='3' onClick={ this.handleScreens }>In House</button>
+              <button name='0' onClick={()=> this.handleScreens(0) }>718 Digital</button>
+              <button name='1' onClick={ ()=> this.handleScreens(1)} style={{'borderTop': 'none'}}>Client Work</button>
+              <button name='2' onClick={ ()=> this.handleScreens(2) }>Consulting</button>
+              <button name='3' onClick={ ()=> this.handleScreens(3) }>In House</button>
           </div>
         <div className='temp vid' key={this.state.currentScreen}>
           <Fade in={this.state.fadeIn} tag="fade-div" timeout={150} addEndListener={this.toggle}>
@@ -94,5 +91,6 @@ class App extends Component {
     );
   }
 }
+//current = client work show this
 
 export default App;
