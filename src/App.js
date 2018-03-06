@@ -3,6 +3,7 @@ import './App.css';
 // import { Container, Fade, Row, Col } from 'reactstrap';
 import { Fade } from 'reactstrap';
 import ScreenOne from './ScreenOne';
+import ScreenTwo from './ScreenTwo';
 
 class App extends Component {
     constructor (props) {
@@ -35,17 +36,28 @@ class App extends Component {
     }
 
     renderComponent(){
-      let display = [<ScreenOne/>];
-      console.log(this.display);
-        switch (this.display) {
-            case 1:
-              return (
-                <ScreenOne />
-              );
-            default:
-              console.log('not working');
-        }
+      let display = [<ScreenOne/>, <ScreenTwo />, 4];
+      console.log(display[0]);
+    //     switch (this.display) {
+    //         case 1:
+    //           return (
+    //             <ScreenOne />
+    //           );
+    //         default:
+    //           console.log('not working');
+    //     }
+    // }
+    // if(display[1]){
+    //   return (
+    //     <ScreenOne />
+    //   );
+    // }
+    if(display[2]){
+      return (
+        <ScreenTwo />
+      );
     }
+  }
   render() {
     // let display = [<ScreenOne/>,<ScreenTwo/>, <ScreenThree/>];
     let display = [<ScreenOne/>];
@@ -75,7 +87,7 @@ class App extends Component {
               {screens[this.state.currentScreen]}
           </Fade>
        </div>
-       <span>{this.renderComponent()}ssssss</span>
+       <span>{this.renderComponent()}</span>
 
 
      </div>
