@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 // import { Container, Fade, Row, Col } from 'reactstrap';
 import { Fade } from 'reactstrap';
+import ScreenOne from './ScreenOne';
 
 class App extends Component {
     constructor (props) {
@@ -13,6 +14,7 @@ class App extends Component {
         }
         this.toggle = this.toggle.bind(this);
         this.handleScreens = this.handleScreens.bind(this);
+        this.renderComponent = this.renderComponent.bind(this);
     }
 
     toggle() {
@@ -32,7 +34,25 @@ class App extends Component {
         this.toggle;
     }
 
+    renderComponent(){
+      let display = [<ScreenOne/>];
+      console.log(this.display);
+        switch (this.display) {
+            case 1:
+              return (
+                <ScreenOne />
+              );
+            default:
+              console.log('not working');
+        }
+    }
   render() {
+    // let display = [<ScreenOne/>,<ScreenTwo/>, <ScreenThree/>];
+    let display = [<ScreenOne/>];
+    // let newScreens = display.map((screen, index) => {
+    //   return
+    // })
+
      let screens = this.state.videoURLS.map((url) => {
         return (
             <video loop autoPlay >
@@ -55,6 +75,9 @@ class App extends Component {
               {screens[this.state.currentScreen]}
           </Fade>
        </div>
+       <span>{this.renderComponent()}ssssss</span>
+
+
      </div>
     );
   }
