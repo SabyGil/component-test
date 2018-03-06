@@ -5,11 +5,14 @@ import Nav from './Nav';
 
 const Routes = () => (
   <Router>
+    <div>
     <Nav />
     <Switch>
       <Route exact path ='/' component={App} />
     </Switch>
+  </div>
   </Router>
 );
 
 export default Routes;
+//
