@@ -16,18 +16,24 @@
 @media only screen and (max-width: 980px) {
 
 }
-
+.testOne {
+  border: 1px solid red;
+  z-index: 4;
+  height: 100vh;
+  width: 100vw;
+}
 .temp {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: center; */
+  /* position: relative;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100vw; */
+  border: 2px solid blue;
 }
 
 .temp.vid {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .temp video{
@@ -42,42 +48,20 @@
   z-index: 0;
 }
 
-.temp .bounds {
-  margin: 0 auto;
-  width: 100%;
-}
-
-.temp .bounds-wide {
-    max-width:  1100px;
-}
-
-.temp .test-btn-container {
-  /* border: 1px solid green; */
-  /* padding: 10px; */
-  /* margin: 0 auto; */
-  /* max-width: 1100px  ;
-  width: 100%; */
-  z-index: 10;
-  text-align: center;
-  border: 1px solid green;
-  padding: 30px;
-}
-
-.temp .test-btn-container h1, button {
-  /* border: 1px solid blue; */
+.temp.vid.content {
+  color: red;
+  /* z-index: 20; */
 }
 
 .menu {
-    z-index: 3;
-    /* position: fixed; */
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-left: none;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: none;
 }
 .menu button {
   border-radius: 0;
-   z-index: 3;
    left: 0;
    display: block;
    color: #ffffff;
@@ -88,6 +72,7 @@
    border-top: none;
    width: 250px;
    height: 60px;
+
 }
 
 .nav {
@@ -112,14 +97,32 @@
   height: 100%;
 }
 
-.bg-one {
-  background: url('https://pixabay.com/en/videos/download/video-4741_medium.mp4') no-repeat center center;
-  background-size: cover;
-  border: 1px solid red;
+.bg-container {
+
 }
 
-.bg-two {
-  background: url('https://pixabay.com/en/videos/download/video-7269_medium.mp4') no-repeat center center;
-  background-size: cover;
-  border: 1px solid red;
+.bg-container video {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  z-index: 0; */
+}
+
+.screen-one-container {
+  border: 1px solid green;
+  height: 100vh;
+}
+
+.screen-one-container video {
+  height: 100%;
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
 }
