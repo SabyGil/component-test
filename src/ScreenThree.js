@@ -1,13 +1,13 @@
 import React from 'react';
 
 
-const ScreenTwo = () => {
+const ScreenThree = () => {
   return (
     <div>
       <header className="v-header container">
         <div className='fullscreen-video-wrap' >
           <video loop autoPlay >
-              <source src={'https://pixabay.com/en/videos/download/video-7269_medium.mp4'} type="video/mp4" />
+              <source src={'https://pixabay.com/en/videos/download/video-4741_medium.mp4'} type="video/mp4" />
               Your browser does not support the video tag.
           </video>
         </div>
@@ -21,4 +21,4 @@ const ScreenTwo = () => {
   );
 }
 
-export default ScreenTwo;
+export default ScreenThree;
