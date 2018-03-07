@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 // import { Container, Fade, Row, Col } from 'reactstrap';
 import { Fade } from 'reactstrap';
-import ScreenOne from './ScreenOne';
-import ScreenTwo from './ScreenTwo';
-import ScreenThree from './ScreenThree';
-import ScreenFour from './ScreenFour';
+
+import ScreenOne from './components/ScreenOne';
+import ScreenTwo from './components/ScreenTwo';
+import ScreenThree from './components/ScreenThree';
+import ScreenFour from './components/ScreenFour';
+import Menu from './components/Menu';
 
 class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      // videoURLS: ['https://pixabay.com/en/videos/download/video-4741_medium.mp4', 'https://pixabay.com/en/videos/download/video-7269_medium.mp4', 'https://pixabay.com/en/videos/download/video-4741_medium.mp4', 'https://pixabay.com/en/videos/download/video-6395_medium.mp4'],
       currentScreen: 'home',
       fadeIn: true
     }
@@ -34,33 +35,17 @@ class App extends Component {
   }
 
   renderComponent(){
-    if(this.state.currentScreen === 'home'){
-      return (
-        <Fade in={this.state.fadeIn} tag="fade-div" timeout={150} addEndListener={this.toggle}>
-          <ScreenOne />
-        </Fade>
-      );
-    }
-    if(this.state.currentScreen === 'client'){
-      return (
-        <Fade in={this.state.fadeIn} tag="fade-div" timeout={150} addEndListener={this.toggle}>
-          <ScreenTwo />
-        </Fade>
-      );
-    }
-    if(this.state.currentScreen === 'consult'){
-      return (
-        <Fade in={this.state.fadeIn} tag="fade-div" timeout={150} addEndListener={this.toggle}>
-          <ScreenThree />
-        </Fade>
-      );
-    }
-    if(this.state.currentScreen === 'inhouse'){
-      return (
-        <Fade in={this.state.fadeIn} tag="fade-div" timeout={150} addEndListener={this.toggle}>
-          <ScreenFour />
-        </Fade>
-      );
+    switch (this.state.currentScreen) {
+        case 'home':
+            return <ScreenOne/>
+        case 'client':
+            return <ScreenTwo/>
+        case 'consult':
+            return <ScreenThree/>
+        case 'inhouse':
+            return <ScreenFour/>
+        default:
+            return <ScreenOne/>
     }
   }
   render() {
@@ -68,12 +53,7 @@ class App extends Component {
     // console.table(this.state);
     return (
       <div>
-        <div className="menu">
-            <button name='0' onClick={ () => this.handleScreens('home') }>718 Digital</button>
-            <button name='1' onClick={ () => this.handleScreens('client') }>Client Work</button>
-            <button name='2' onClick={ () => this.handleScreens('consult') }>Consulting</button>
-            <button name='3' onClick={ () => this.handleScreens('inhouse') }>In House</button>
-        </div>
+          <Menu self={ this }/>
         <div className='for-media'>
           <Fade in={this.state.fadeIn} tag="fade-div" timeout={1000} addEndListener={this.toggle}>
             {this.renderComponent()}

@@ -8,7 +8,7 @@ class ScreenOne extends React.Component {
         <header className="v-header container">
           <div className='fullscreen-video-wrap' >
             <video loop autoPlay >
-                <source src={'https://pixabay.com/en/videos/download/video-4741_medium.mp4'} type="video/mp4" />
+                <source src={'https://pixabay.com/en/videos/download/video-6389_medium.mp4'} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
           </div>
