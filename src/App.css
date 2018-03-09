@@ -11,27 +11,35 @@
    -o-background-size: cover;
     background-size: cover;
   }
-  .test {
-    display: grid;
-    grid-template-columns: 1fr;
+  .for-media .view-container {
+    margin-left: 0;
   }
 }
 
 @media only screen and (max-width: 980px) {
 
 }
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
 
 .menu {
   z-index: 3;
   position: absolute;
-  left: 0;
-  top: 0;
   border-left: none;
+  width: 250px;
+  top: 0;
+  bottom: 0;
 }
 
 .menu button {
   border-radius: 0;
-  left: 0;
   display: block;
   color: #ffffff;
   background-color: rgba(0,0,0,.5);
@@ -39,21 +47,30 @@
   border-right: none;
   border-bottom: 1px solid lightGrey;
   border-top: none;
-  width: 250px;
-  height: 60px;
+  width: 100%;
+  /* height: 60px; */
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.menu button:hover {
+  background: transparent;
+  border-left: 5px solid royalBlue;
+  /* padding: 15px 30px 15px 25px; */
+  padding: 21px 0;
 }
 
 /*--*/
-.test {
-  display: grid;
-  grid-template-columns: 1fr 4.3fr;
-  /* grid-auto-rows: minmax(100%, auto); */
+.view-container {
+  margin-left: 250px;
 }
+
 .container {
-  max-width:960px;
+  /* max-width:960px;
   padding-left:1rem;
   padding-right:1rem;
-  margin:auto;
+  margin:auto; */
   text-align:center;
 }
 

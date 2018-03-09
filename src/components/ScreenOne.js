@@ -4,8 +4,7 @@ import React from 'react';
 class ScreenOne extends React.Component {
   render(){
     return (
-      <div className='test'>
-        <div></div>
+      <div className='view-container'>
         <header className="v-header container ">
           <div className='fullscreen-video-wrap' >
             <video loop autoPlay >
@@ -19,7 +18,6 @@ class ScreenOne extends React.Component {
             <a className="btn">Find Out More</a>
           </div>
         </header>
-
       </div>
     );
   }

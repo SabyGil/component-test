@@ -55,9 +55,7 @@ class App extends Component {
       <div>
           <Menu self={ this }/>
         <div className='for-media'>
-          <Fade in={this.state.fadeIn} tag="fade-div" timeout={1000} addEndListener={this.toggle}>
             {this.renderComponent()}
-          </Fade>
         </div>
      </div>
     );

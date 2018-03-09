@@ -3,8 +3,7 @@ import React from 'react';
 
 const ScreenFour = () => {
   return (
-    <div className='test'>
-      <div></div>
+    <div className='view-container'>
       <header className="v-header container">
         <div className='fullscreen-video-wrap' >
           <video loop autoPlay >
