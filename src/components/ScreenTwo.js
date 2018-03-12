@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ClientCards from './ClientCards';
 
 const ScreenTwo = () => {
   return (
@@ -11,10 +11,19 @@ const ScreenTwo = () => {
               Your browser does not support the video tag.
           </video>
         </div>
-        <div className="header-content text-md-center">
-          <h1>Welcome Everyone</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
-          <a className="btn">Find Out More</a>
+        <div className="header-content">
+              <h1>Client Work</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
+              <a className="btn">Frameworks & Languages</a>
+              <ul>
+                  <li>Python</li>
+                  <li>React</li>
+                  <li>Angular</li>
+                  <li>Ionic</li>
+                  <li>Vue</li>
+                  <li>Sup Joe</li>
+            </ul>
+        <ClientCards/>
         </div>
       </header>
     </div>

@@ -64,6 +64,7 @@
 /*--*/
 .view-container {
   margin-left: 250px;
+  z-index: 4;
 }
 
 .container {
@@ -95,29 +96,18 @@
   min-width: 100%;
 }
 
-.v-header.container .header-content {
+.header-content {
   z-index: 3;
-  /* border: 1px solid green; */
+  border: 1px solid green;
+  color: black;
 }
 
-/* .content-container span {
-  border: 5px solid red;
-  z-index: 30;
-} */
-
-/* .header-overlay {
-  height:100vh;
-  position: absolute;
-  top:0;
-  left:0;
-  width:100vw;
-  z-index:1;
-  background: transparent;
-  opacity:0.85;
-} */
-
-/* fade-div {
-  border: 1px solid red;
-} */
+.grid {
+  display: flex;
+}
 
 /*--*/
+
+ul {
+  list-style: none;
+}
