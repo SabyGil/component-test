@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
-  const styling = {
-      'width': '50%',
-      border: '1px solid red',
-      color: 'blue',
-  }
-
-  const stylesCards = {
-
-  }
 
   let objs = [
       {
@@ -37,7 +28,7 @@ import { Card, CardImg, CardText, CardBody,
 
   let mapped = objs.map((client, index) => {
       return(
-          <Card style={styling} key={index}>
+          <Card key={index}>
             <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
             <CardBody>
               <CardTitle>{client.proj}</CardTitle>

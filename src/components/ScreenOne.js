@@ -5,7 +5,7 @@ class ScreenOne extends React.Component {
   render(){
     return (
       <div className='view-container'>
-        <header className="v-header container ">
+        <header className="v-header">
           <div className='fullscreen-video-wrap' >
             <video loop autoPlay >
                 <source src={'https://pixabay.com/en/videos/download/video-6389_medium.mp4'} type="video/mp4" />
