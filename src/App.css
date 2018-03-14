@@ -94,8 +94,48 @@ button {
   top: 0;
   bottom: 0;
   min-width: 100%;
+<<<<<<< Updated upstream
   min-height: 100%;
   overflow: hidden;
   z-index: 0;
+=======
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+
+.header-content {
+  overflow: scroll;
+  color: black;
+  margin-left: 250px;
+  height: 100%;
+  /* width: 100vw; */
+  text-align: center;
+/* padding: 80px 0; */
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.grid .card {
+  width: 100%;
+}
+
+.thumb-image {
+  /* position: absolute; */
+   width: 500px;
+   height: 400px;
+   background: center center no-repeat;
+   background-size: cover;
+   cursor: pointer;
+ }
+
+/*--*/
+>>>>>>> Stashed changes
 
 }
