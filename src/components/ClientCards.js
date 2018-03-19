@@ -19,11 +19,11 @@ import { Card, CardImg, CardText, CardBody,
           who: 'Super Client',
           desc: 'Mad cool app for the dudes at somewhere else'
       },
-      {
-          proj: 'Hands Free',
-          who: 'Gabe',
-          desc: 'Mad cool thing for taxi driver managers'
-      }
+      // {
+      //     proj: 'Hands Free',
+      //     who: 'Gabe',
+      //     desc: 'Mad cool thing for taxi driver managers'
+      // }
   ]
 
   let mapped = objs.map((client, index) => {

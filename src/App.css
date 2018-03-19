@@ -88,7 +88,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .view-container .fullscreen-video-wrap video {
@@ -104,7 +104,7 @@
 }
 
 .header-content {
-  overflow: scroll;
+  /* overflow: scroll; */
   color: black;
   margin-left: 250px;
   height: 100%;
@@ -124,6 +124,14 @@
   width: 100%;
 }
 
+.thumb-image {
+  /* position: absolute; */
+   /* width: 500px; */
+   /* height: 400px;
+   background: center center no-repeat;
+   background-size: cover;
+   cursor: pointer; */
+ }
 /*--*/
 
 ul {
