@@ -129,3 +129,34 @@
 ul {
   list-style: none;
 }
+
+/* TempTwo styles */
+
+.element {
+	height:1000px;
+	background-color: #ededed;
+	font-size: 45px;
+	border-top:1px solid #000;
+	padding-top:55px;
+	padding-left:10px;
+  z-index: 10;
+  border: 5px solid green;
+
+}
+
+.active {
+	color:red !important;
+}
+
+#scroll-container {
+    /* margin-top: 99px; */
+    height: 400px;
+    overflow: scroll;
+    /* overflow: visible!important; */
+visibility: visible!important;
+}
+
+.test {
+  border: 5px solid blue;
+}
+/* /TempTwo sty/es */
