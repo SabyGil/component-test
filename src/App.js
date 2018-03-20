@@ -3,9 +3,9 @@ import './App.css';
 // import { Container, Fade, Row, Col } from 'reactstrap';
 import { Fade } from 'reactstrap';
 
-// import ScreenOne from './components/ScreenOne';
+import ScreenOne from './components/ScreenOne';
 // import ScreenOne from './components/ScreenOneTempTwo';
-import ScreenOne from './components/ScreenOneTempThree';
+// import ScreenOne from './components/ScreenOneTempThree';
 import ScreenTwo from './components/ScreenTwo';
 import ScreenThree from './components/ScreenThree';
 import ScreenFour from './components/ScreenFour';
