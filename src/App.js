@@ -44,6 +44,7 @@ class App extends Component {
      })
      console.table(this.state);
     return (
+<<<<<<< Updated upstream
       <div>
       <div className='temp vid' key={this.state.currentScreen}>
         <Fade in={this.state.fadeIn} tag="fade-div" timeout={300}>
@@ -52,6 +53,12 @@ class App extends Component {
         <div className='test-btn-container bounds bounds-wide'>
           <h1>hello</h1>
           <button onClick={ this.handleScreens }>Change</button>
+=======
+      <div className='wrapper'>
+          <Menu self={ this } className='item1'/>
+        <div className='for-media item2'>
+            {this.renderComponent()}
+>>>>>>> Stashed changes
         </div>
      </div>
    </div>
