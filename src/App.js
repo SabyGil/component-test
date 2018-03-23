@@ -16,7 +16,8 @@ class App extends Component {
     super(props);
     this.state = {
       currentScreen: 'home',
-      fadeIn: true
+      fadeIn: true,
+      // number: 1
     }
     this.toggle = this.toggle.bind(this);
     this.handleScreens = this.handleScreens.bind(this);
@@ -50,9 +51,29 @@ class App extends Component {
             return <ScreenOne/>
     }
   }
+
+  // ---
+ //  handleNextButton(){
+ //    if (this.state.number < 3 ){
+ //        this.setState({
+ //            number: this.state.number + 1
+ //        });
+ //    }
+ //  }
+ //
+ //  handleBackButton(){
+ //     console.log(this.state.number)
+ //     if (this.state.number > 1){
+ //         this.setState({
+ //             number: this.state.number - 1
+ //         })
+ //     }
+ // }
   render() {
     // console.log(this.state)
     // console.table(this.state);
+    // let Screens = [<ScreenOne/>,<ScreenTwo/>, <ScreenThree/>, <ScreenFour/>];
+    // let displayScreen = Screens[this.state.number -1 ];
     return (
       <div>
           <Menu self={ this }/>

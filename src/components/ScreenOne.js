@@ -64,7 +64,7 @@ class ScreenOne extends React.Component {
             </div>
           {/* <h1 className='center' onClick={ e => this.setState({ someDivs: this.genData() }) }>Full Width</h1> */}
 
-          <div className="hr"></div>
+          {/* <div className="hr"></div> */}
           {/* <h1 className='center' onClick={ e => this.setState({ someDivs: this.genData() }) }>Arbitrary Width, Spring Config</h1> */}
           {/* <div style={{ height: `22.7em`, width: `66%`}} > */}
               {/* <HorizontalScroll config={{ stiffness: 160, damping: 110}}> */}
