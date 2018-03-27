@@ -103,4 +103,4 @@ class ScreenOne extends React.Component {
     }
 }
 
-export default ScreenOne;
+// export default ScreenOne;

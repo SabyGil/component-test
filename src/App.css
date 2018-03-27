@@ -179,3 +179,27 @@ visibility: visible!important;
   border: 2px solid blue;
 }
 /* /TempTwo sty/es */
+.item {
+  height: 10rem;
+  background: #4DC7A0;
+  padding: 1rem;
+}
+
+.owl-theme .owl-prev {
+  color: black;
+  background-color: black;
+}
+
+div.owl-prev {
+  color: black;
+  border: 1px solid red;
+  background-color: black;
+}
+
+.owl-nav {
+  width: 80vw;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
