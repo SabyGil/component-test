@@ -135,6 +135,15 @@ ul {
   list-style: none;
 }
 
+/* tempthree */
+ul.navbar-nav {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+}
+/*  */
+
 /* TempTwo styles */
 
 .element {
@@ -202,4 +211,5 @@ div.owl-prev {
   bottom: 50px;
   display: flex;
   justify-content: space-between;
+  padding: 0 10px;
 }

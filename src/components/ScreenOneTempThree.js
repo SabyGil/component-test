@@ -2,11 +2,14 @@ import React from 'react';
 import * as Scroll from 'react-scroll';
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
+import ScreenTwo from './ScreenTwo';
+
+
 var durationFn = function(deltaTop) {
     return deltaTop;
 };
 
-class ScreenOne extends React.Component{
+class App extends React.Component{
 
   constructor (props){
       super(props);
@@ -40,7 +43,7 @@ class ScreenOne extends React.Component{
         <nav className="navbar navbar-default navbar-fixed-top">
           <div className="container-fluid">
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav">
+              <ul className="nav navbar-nav nav-styles">
                 <li><Link containerId="scroll-container" activeClass="active" className="test1" to="test1" spy={true} duration={500} >Test 1</Link></li>
                 <li><Link containerId="scroll-container" activeClass="active" className="test2" to="test2" spy={true} duration={500}>Test 2</Link></li>
                 {/* <li><Link containerId="scroll-container" activeClass="active" className="test3" to="test3" spy={true} duration={500} smooth={true}>Test 3</Link></li> */}
@@ -48,10 +51,7 @@ class ScreenOne extends React.Component{
                 <li><Link containerId="scroll-container" activeClass="active" className="test5" to="test5" spy={true} duration={500} delay={1000}>Test 5 ( delay )</Link></li>
                 {/* <li><Link containerId="scroll-container" activeClass="active" className="test6" to="anchor" spy={true} duration={500}>Test 6 (anchor)</Link></li> */}
                 <li><Link containerId="scroll-container" activeClass="active" className="test7" to="test7" spy={true} duration={durationFn}>Test 7 (duration and container)</Link></li>
-                <li> <a onClick={(event) => scroll.scrollTo(100, { containerId : "scroll-container"} ) }>Scroll To 100!</a></li>
-                <li> <a onClick={(event) => scroll.scrollToBottom({ containerId : "scroll-container"} )}>Scroll To Bottom</a></li>
-                <li> <a onClick={(event) => scroll.scrollMore(500, { containerId : "scroll-container"} )}>Scroll 500 More!</a></li>
-                <li> <a onClick={(event) => scroll.scrollMore(1000, { containerId : "scroll-container" , delay : 1500 })}>Scroll 1000 More! ( delay ) </a></li>
+
                 <li><Link containerId="scroll-container" activeClass="active" className="test8" to="same" spy={true} smooth={true} duration={500}>Same target</Link></li>
                 <li><Link containerId="scroll-container" activeClass="active" className="test9" to="same" spy={true} smooth={true} duration={500}>Same target</Link></li>
               </ul>
@@ -64,7 +64,7 @@ class ScreenOne extends React.Component{
         </Element>
 
         <Element name="test2" className="element">
-          test 2
+          <ScreenTwo />
         </Element>
 
         <Element name="test3" className="element">
@@ -125,7 +125,7 @@ class ScreenOne extends React.Component{
   render() {
     return (
       <div>
-        <div className="header">test header</div>
+        {/* <div className="header">test header</div> */}
         <div id="scroll-container" className='navbar-default'>
           { this.renderContent() }
         </div>
@@ -134,4 +134,4 @@ class ScreenOne extends React.Component{
   }
 }
 
-export default ScreenOne;
+export default App;
