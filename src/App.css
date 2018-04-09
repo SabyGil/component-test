@@ -30,12 +30,13 @@
 }
 
 .menu {
-  z-index: 3;
+  /* z-index: 100; */
   position: absolute;
   border-left: none;
   width: 250px;
   top: 0;
   bottom: 0;
+  /* visibility: hidden; */
 }
 
 .menu button {
@@ -83,12 +84,12 @@
 }
 
 .view-container .fullscreen-video-wrap  {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .view-container .fullscreen-video-wrap video {
@@ -104,9 +105,9 @@
 }
 
 .header-content {
-  /* overflow: scroll; */
+  overflow: scroll;
   color: black;
-  margin-left: 250px;
+  /* margin-left: 250px; */
   height: 100%;
   padding: 30px;
   width: 100%;
@@ -137,25 +138,64 @@ ul {
 
 /* tempthree */
 ul.navbar-nav {
-  border: 1px solid red;
+  /* border: 5px solid red; */
   display: flex;
-  flex-direction: row;
-  position: fixed;
+   flex-direction: row;
+   position: fixed;
+   z-index: 103;
+   /* overflow-y: scroll; */
+   width: 100vw;
+   left: 0;
+   right: 0;
+   background: transparent;
+   color: gold;
 }
+
+ul li:nth-child(2) {
+  margin-left: auto;
+}
+
+.bg1{
+  /* background-image:url('../img/image1.jpg'); */
+  min-height:100%;
+}
+
+.bg2{
+  /* background-image:url('../img/image2.jpg'); */
+  min-height:400px;
+}
+
+.bg3{
+  /* background-image:url('../img/image3.jpg'); */
+  min-height:400px;
+}
+
+.bg4 {
+  /* background-image:url('../img/image3.jpg'); */
+  min-height:400px;
+}
+
+.bg1, .bg2, .bg3, .bg4 {
+    position: relative;
+    /* opacity: 0.70; */
+    /* background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+  }
 /*  */
 
 /* TempTwo styles */
 
 .element {
-	height:1000px;
-	background-color: #ededed;
+	height: 840px;
+	/* background-color: #ededed; */
 	font-size: 45px;
 	border-top:1px solid #000;
 	padding-top:55px;
 	padding-left:10px;
   z-index: 10;
-  border: 5px solid green;
-
+  /* border: 5px solid green; */
 }
 
 .active {
@@ -164,10 +204,13 @@ ul.navbar-nav {
 
 #scroll-container {
     /* margin-top: 99px; */
-    height: 400px;
+    height: 100vh;
     overflow: scroll;
     /* overflow: visible!important; */
-visibility: visible!important;
+/* visibility: visible!important; */
+border: 1px solid green;
+overflow: hidden;
+
 }
 
 .test {

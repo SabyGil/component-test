@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-// import App from './App';
-import App from './components/App';
+import App from './App';
+// import App from './components/ScreenOneTempThree';
 
 const Routes = () => (
   <Router>
