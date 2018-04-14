@@ -17,7 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       currentScreen: 'home',
-      fadeIn: true,
+      fadeIn: false,
       // number: 1
     }
     this.toggle = this.toggle.bind(this);

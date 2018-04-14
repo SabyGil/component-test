@@ -47,10 +47,10 @@ class App extends React.Component{
           <div className="container-fluid">
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav nav-styles">
-                <li><Link containerId="scroll-container" activeClass="active" className="test1" to="test1" spy={true} duration={900} smooth={true}>LOGO</Link></li>
-                <li><Link containerId="scroll-container" activeClass="active" className="test2" to="test2" spy={true} duration={900} smooth={true}>Contact</Link></li>
-                <li><Link containerId="scroll-container" activeClass="active" className="test3" to="test3" spy={true} duration={900} smooth={true}>Services</Link></li>
-                <li><Link containerId="scroll-container" activeClass="active" className="test4" to="test4" spy={true} duration={900} smooth={true}>Client Work</Link></li>
+                <li><Link containerId="scroll-container" activeClass="active" className="test1" to="test1" spy={true} duration={800} smooth={true}>LOGO</Link></li>
+                <li><Link containerId="scroll-container" activeClass="active" className="test2" to="test2" spy={true} duration={800} smooth={true}>Contact</Link></li>
+                <li><Link containerId="scroll-container" activeClass="active" className="test3" to="test3" spy={true} duration={800} smooth={true}>Services</Link></li>
+                <li><Link containerId="scroll-container" activeClass="active" className="test4" to="test4" spy={true} duration={800} smooth={true}>Client Work</Link></li>
               </ul>
             </div>
           </div>
