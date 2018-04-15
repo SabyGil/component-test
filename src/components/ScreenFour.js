@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const ScreenFour = () => {
   return (
@@ -7,14 +7,34 @@ const ScreenFour = () => {
       <header className="v-header">
         <div className='fullscreen-video-wrap' >
           <video loop autoPlay >
-              <source src={'https://pixabay.com/en/videos/download/video-4749_medium.mp4'} type="video/mp4" />
+            <source src={'https://pixabay.com/en/videos/download/video-4749_medium.mp4'} type="video/mp4" />
               Your browser does not support the video tag.
           </video>
         </div>
-        <div className="header-content text-md-center">
-          <h1>Welcome Everyone</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
-          <a className="btn">Find Out More</a>
+        {/* <div className="header-content text-md-center"> */}
+        <div className="">
+          <Form>
+          <FormGroup>
+             <Label for="exampleEmail">Email</Label>
+             <Input type="email" name="email"  placeholder="with a placeholder" />
+           </FormGroup>
+           <FormGroup>
+             <Label for="examplePassword">Password</Label>
+             <Input type="password" name="password" placeholder="password placeholder" />
+           </FormGroup>
+           <FormGroup>
+             <Label for="examplePassword">ipsum</Label>
+             <Input type="password" name="password" placeholder="password placeholder" />
+           </FormGroup>
+           <FormGroup>
+             <Label for="examplePassword">ipsum</Label>
+             <Input type="password" name="password" placeholder="password placeholder" />
+           </FormGroup>
+          </Form>
+
+          <footer>
+            	<span>&copy;2018 718 Digital</span>
+          </footer>
         </div>
       </header>
     </div>

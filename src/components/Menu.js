@@ -32,12 +32,12 @@ class Menu extends React.Component {
             <li><Link containerId="scroll-container" activeClass="active" className="contact-btn" to="test4" spy={true} duration={800} smooth={true}>Contact</Link></li>
             <div>
               <button onClick={ (e) => this.toggleNav(e) } aria-expanded="false" aria-controls="menu-list">
-                <span className="open"><i class="fas fa-bars"></i></span>
+                <span className="open"><i className="fas fa-bars"></i></span>
                 {/* <span className="close"><i class="fas fa-times"></i></span> */}
               </button>
               <div className='menu-list'>
-                <li><Link containerId="scroll-container" activeClass="active" className="test3" to="test2" spy={true} duration={800} smooth={true}>Services</Link></li>
-                <li><Link containerId="scroll-container" activeClass="active" className="test4" to="test3" spy={true} duration={800} smooth={true}>Client Work</Link></li>
+                <li><Link containerId="scroll-container" activeClass="active" className="test4" to="test2" spy={true} duration={800} smooth={true}>About</Link></li>
+                <li><Link containerId="scroll-container" activeClass="active" className="test3" to="test3" spy={true} duration={800} smooth={true}>Services</Link></li>
               </div>
             </div>
           </ul>
