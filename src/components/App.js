@@ -2,11 +2,14 @@ import React from 'react';
 import * as Scroll from 'react-scroll';
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-import ScreenOne from './ScreenOneFinal';
+import ScreenOne from './ScreenOne';
 import ScreenTwo from './ScreenTwo';
 import ScreenThree from './ScreenThree';
 import ScreenFour from './ScreenFour';
 
+import Menu from './Menu';
+
+import '../App.css';
 
 var durationFn = function(deltaTop) {
     return deltaTop;
@@ -43,19 +46,6 @@ class App extends React.Component{
   renderContent () {
     return (
       <div>
-        {/* <nav className="navbar navbar-default navbar-fixed-top"> */}
-          <div className="container-fluid">
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav nav-styles">
-                <li><Link containerId="scroll-container" activeClass="active" className="test1" to="test1" spy={true} duration={800} smooth={true}>LOGO</Link></li>
-                <li><Link containerId="scroll-container" activeClass="active" className="test2" to="test2" spy={true} duration={800} smooth={true}>Contact</Link></li>
-                <li><Link containerId="scroll-container" activeClass="active" className="test3" to="test3" spy={true} duration={800} smooth={true}>Services</Link></li>
-                <li><Link containerId="scroll-container" activeClass="active" className="test4" to="test4" spy={true} duration={800} smooth={true}>Client Work</Link></li>
-              </ul>
-            </div>
-          </div>
-        {/* </nav> */}
-
         <Element name="test1" className="element bg1" >
           <ScreenOne />
         </Element>
@@ -81,7 +71,8 @@ class App extends React.Component{
   render() {
     return (
       <div>
-        <div id="scroll-container" className=''>
+        <Menu  />
+        <div id="scroll-container" className='for-media'>
           { this.renderContent() }
         </div>
       </div>

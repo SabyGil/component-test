@@ -53,28 +53,9 @@ class App extends Component {
     }
   }
 
-  // ---
- //  handleNextButton(){
- //    if (this.state.number < 3 ){
- //        this.setState({
- //            number: this.state.number + 1
- //        });
- //    }
- //  }
- //
- //  handleBackButton(){
- //     console.log(this.state.number)
- //     if (this.state.number > 1){
- //         this.setState({
- //             number: this.state.number - 1
- //         })
- //     }
- // }
   render() {
     // console.log(this.state)
     // console.table(this.state);
-    // let Screens = [<ScreenOne/>,<ScreenTwo/>, <ScreenThree/>, <ScreenFour/>];
-    // let displayScreen = Screens[this.state.number -1 ];
     return (
       <div>
           <Menu self={ this }/>
@@ -86,4 +67,4 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;

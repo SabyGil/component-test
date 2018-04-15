@@ -104,7 +104,7 @@
 }
 
 .header-content {
-  overflow: scroll;
+  /* overflow: scroll; */
   color: black;
   /* margin-left: 250px; */
   height: 100%;
@@ -194,7 +194,7 @@ ul li:nth-child(2) {
 	border-top:1px solid #000;
 	padding-top:55px;
 	padding-left:10px;
-  z-index: 10;
+  z-index: 1;
   /* border: 5px solid green; */
 }
 
@@ -203,14 +203,11 @@ ul li:nth-child(2) {
 }
 
 #scroll-container {
-    /* margin-top: 99px; */
-    height: 100vh;
-    overflow: scroll;
-    /* overflow: visible!important; */
+  /* margin-top: 99px; */
+  height: 100vh;
+/* overflow: visible!important; */
 /* visibility: visible!important; */
-border: 1px solid green;
-overflow: hidden;
-
+  overflow: hidden;
 }
 
 .test {
@@ -255,4 +252,87 @@ div.owl-prev {
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
+}
+
+/* menu styles */
+.menuTest {
+  position: relative;
+  /* left: 0; */
+  /* right: 0; */
+  /* border: 1px solid green; */
+  font-size: 1.7rem;
+}
+
+.menuTest ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 2;
+  color: gold;
+  align-items: center;
+  margin: 0;
+  /* padding: 0; */
+  /* width: 100vw; */
+  /* left: 0;
+  right: 0; */
+  /* background: transparent; */
+  /* transform: rotateX(90deg); */
+  /* transition: all .5s; */
+  /* max-height: 0; */
+  /* overflow: hidden; */
+}
+.menuTest button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.menuTest button:focus {
+  outline: none;
+}
+
+.menuTest button [aria-controls='menu-list'] .menu-list {
+  border: 10px solid green;
+}
+
+.menuTest .contact-btn, .open {
+  margin-right: 20px;
+  /* padding-right: 20px; */
+}
+
+.menuTest .logo {
+  margin-left: 20px;
+}
+
+[aria-expanded='true'] {
+  /* display: grid; */
+  /* max-width: 500px; */
+}
+
+[aria-expanded='true'] ~  .menu-list{
+  /* display: block; */
+  /* transform: rotateX(0); */
+  /* border: 15px solid red; */
+  position: absolute;
+  /* width: 200px; */
+  right: 0;
+  /* border: 1px solid red; */
+}
+
+[aria-expanded='false'] ~  .menu-list {
+  display: none;
+  border: 1px solid blue;
+}
+
+/* [aria-expanded='false'] .close {
+  display: none;
+} */
+
+[aria-expanded='true'] .close {
+  /* display: inline-block ; */
+}
+
+[aria-expanded='true'] .open {
+  /* display: none; */
 }
