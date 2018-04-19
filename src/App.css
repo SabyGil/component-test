@@ -73,6 +73,7 @@ body {
 /*--*/
 .view-container {
   overflow: auto;
+  /* position: fixed; */
 }
 
 .container {
@@ -110,15 +111,18 @@ body {
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   z-index: -1;
+  /*  */
+
 }
 
 .header-content {
-  /* overflow: scroll; */
-  color: black;
-  /* margin-left: 250px; */
   height: 100%;
-  padding: 50px;
+  color: black;
+  /* overflow: scroll; */
+  /* margin-left: 250px; */
+  /* padding: 50px; */
   width: 100%;
+  /* padding: 3rem; */
   /* text-align: center; */
   /* padding: 80px 0;
   width: 100vw; */
@@ -347,3 +351,9 @@ div.owl-prev {
 [aria-expanded='true'] .open {
   /* display: none; */
 }
+
+/* .no-flick {
+  -webkit-transform:translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  border: 1px solid red;
+} */
