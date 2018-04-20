@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 const ScreenFour = () => {
   return (
     <div className='view-container'>
-      <header className="v-header">
+      <header className="contact-container">
         <div className='fullscreen-video-wrap' >
           <video loop autoPlay >
             <source src={'https://pixabay.com/en/videos/download/video-4749_medium.mp4'} type="video/mp4" />
@@ -12,24 +12,24 @@ const ScreenFour = () => {
           </video>
         </div>
         {/* <div className="header-content text-md-center"> */}
-        <div className="">
+        <div id='contact-form'>
           <Form>
-          <FormGroup>
-             <Label for="exampleEmail">Email</Label>
-             <Input type="email" name="email"  placeholder="with a placeholder" />
-           </FormGroup>
-           <FormGroup>
-             <Label for="examplePassword">Password</Label>
-             <Input type="password" name="password" placeholder="password placeholder" />
-           </FormGroup>
-           <FormGroup>
-             <Label for="examplePassword">ipsum</Label>
-             <Input type="password" name="password" placeholder="password placeholder" />
-           </FormGroup>
-           <FormGroup>
-             <Label for="examplePassword">ipsum</Label>
-             <Input type="password" name="password" placeholder="password placeholder" />
-           </FormGroup>
+             <FormGroup>
+               <Label for="name">Name:</Label>
+               <Input type="text" name="name" placeholder="your name..." />
+             </FormGroup>
+             <FormGroup>
+               <Label for="subject">Subject:</Label>
+               <Input type="text" name="subject" placeholder="subject" />
+             </FormGroup>
+             <FormGroup>
+                <Label for="exampleEmail">Email</Label>
+                <Input type="email" name="email"  placeholder="john@..." />
+              </FormGroup>
+             <FormGroup>
+               <Label for="exampleText">Body</Label>
+               <Input type="textarea" name="text" id="exampleText" />
+            </FormGroup>
           </Form>
 
           <footer>

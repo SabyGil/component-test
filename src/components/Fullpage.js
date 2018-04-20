@@ -4,6 +4,9 @@ import ScreenOne from './ScreenOne';
 import ScreenTwo from './ScreenTwo';
 import ScreenThree from './ScreenThree';
 import ScreenFour from './ScreenFour';
+import ScreenThreeOne from './HorizontalScreens/ScreenThree_One';
+import * as Scroll from 'react-scroll';
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const {changeFullpageSlide, changeHorizontalSlide} = Fullpage;
 
@@ -73,6 +76,10 @@ const horizontalSliderProps = {
 
 };
 
+const durationFn = function(deltaTop) {
+  return deltaTop;
+};
+
 class FullpageReact extends React.Component {
 
   constructor(props) {
@@ -85,6 +92,7 @@ class FullpageReact extends React.Component {
     };
     this.onSlideChangeStart = this.onSlideChangeStart.bind(this);
     this.onSlideChangeEnd = this.onSlideChangeEnd.bind(this);
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   onSlideChangeStart(name, props, state, newState) {
@@ -109,7 +117,26 @@ class FullpageReact extends React.Component {
     this.setState(updatedState);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+      Events.scrollEvent.register('begin', function() {
+        console.log("begin", arguments);
+      });
+
+      Events.scrollEvent.register('end', function() {
+        console.log("end", arguments);
+      });
+
+      scrollSpy.update();
+    }
+
+    scrollToTop(options) {
+      scroll.scrollToTop(options);
+    }
+
+    componentWillUnmount() {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    }
 
   render() {
 
@@ -158,27 +185,27 @@ class FullpageReact extends React.Component {
     const horizontalNav = (<div id='horizontal-nav' style={horizontalNavStyle}>
 
       <span onClick={prevHorizontalSlide}>
-        <button>PREV</button>
+        <button><i class="fas fa-chevron-left"></i></button>
       </span>
 
       <span style={{
           position: 'absolute',
           right: '0px'
         }} onClick={nextHorizontalSlide}>
-        <button>Next</button>
+        <button><i class="fas fa-chevron-right"></i></button>
       </span>
 
     </div>);
 
     const horizontalSlides = [
-      <Slide className='no-flick'>
+      <Slide name='test3' className='no-flick'>
         <ScreenThree />
       </Slide>,
 
       <Slide className='no-flick' style={{
           backgroundColor: 'lightGrey'
         }}>
-        <p>Horizontal 2</p>
+        <ScreenThreeOne />
       </Slide>,
 
       <Slide className='no-flick' style={{
@@ -200,21 +227,25 @@ class FullpageReact extends React.Component {
     const horizontalSlider = <HorizontalSlider id='horizontal-slider-1' {...horizontalSliderProps}>{horizontalNav}</HorizontalSlider>;
 
     const verticalSlides = [
-      <Slide>
+      <Slide >
         <ScreenOne />
       </Slide>,
-      <Slide>
-        <ScreenTwo/>
+      <Slide >
+        <ScreenTwo  />
       </Slide>,
       horizontalSlider,
       <Slide>
-        <ScreenFour/>
+        <ScreenFour  />
       </Slide>
     ];
 
     fullPageOptions.slides = verticalSlides;
     return (
-      <Fullpage onSlideChangeStart={this.onSlideChangeStart} onSlideChangeEnd={this.onSlideChangeEnd} {...fullPageOptions}>
+      <Fullpage
+        onSlideChangeStart={this.onSlideChangeStart}
+        onSlideChangeEnd={this.onSlideChangeEnd}
+        {...fullPageOptions}
+        >
         {/* {topNav} */}
       </Fullpage>
     );

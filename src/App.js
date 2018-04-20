@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-// import { Container, Fade, Row, Col } from 'reactstrap';
 import { Fade } from 'reactstrap';
-
-// import ScreenOne from './components/ScreenOne';
-// import ScreenOne from './components/ScreenOneTempTwo';
-// import ScreenOne from './components/ScreenOneFinal';
-// import ScreenOne from './components/ScreenOneTempThree';
-// import ScreenTwo from './components/ScreenTwo';
-// import ScreenThree from './components/ScreenThree';
-// import ScreenFour from './components/ScreenFour';
+// import * as Scroll from 'react-scroll';
+// import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import Menu from './components/Menu';
-
 import FullpageReact from './components/Fullpage';
 
 
@@ -21,11 +13,8 @@ class App extends Component {
     this.state = {
       currentScreen: 'home',
       fadeIn: false,
-      // number: 1
     }
     // this.toggle = this.toggle.bind(this);
-    // this.handleScreens = this.handleScreens.bind(this);
-    // this.renderComponent = this.renderComponent.bind(this);
   }
 
   toggle() {
@@ -41,32 +30,14 @@ class App extends Component {
       })
   }
 
-  // renderComponent(){
-  //   switch (this.state.currentScreen) {
-  //       case 'home':
-  //           return <ScreenOne/>
-  //       case 'client':
-  //           return <ScreenTwo/>
-  //       case 'consult':
-  //           return <ScreenThree/>
-  //       case 'inhouse':
-  //           return <ScreenFour/>
-  //       default:
-  //           return <ScreenOne/>
-  //   }
-  // }
-
   render() {
     // console.log(this.state)
     // console.table(this.state);
     return (
       <div>
-          <Menu self={ this }/>
-
-          <FullpageReact  />
-        <div id="scroll-container" className='for-media'>
-            {/* {this.renderComponent()} */}
-        </div>
+        <Menu self={ this }/>
+        <FullpageReact  />
+        <div id="scroll-container" className='for-media'></div>
      </div>
     );
   }
