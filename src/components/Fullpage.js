@@ -1,12 +1,12 @@
 import React from 'react';
-import {Fullpage, Slide, HorizontalSlider} from 'fullpage-react';
+import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
 import ScreenOne from './ScreenOne';
 import ScreenTwo from './ScreenTwo';
 import ScreenThree from './ScreenThree';
 import ScreenFour from './ScreenFour';
 import ScreenThreeOne from './HorizontalScreens/ScreenThree_One';
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+import { Element } from 'react-scroll';
 import Menu from './Menu';
 
 const {changeFullpageSlide, changeHorizontalSlide} = Fullpage;
@@ -77,10 +77,6 @@ const horizontalSliderProps = {
 
 };
 
-const durationFn = function(deltaTop) {
-  return deltaTop;
-};
-
 class FullpageReact extends React.Component {
 
   constructor(props) {
@@ -93,7 +89,6 @@ class FullpageReact extends React.Component {
     };
     this.onSlideChangeStart = this.onSlideChangeStart.bind(this);
     this.onSlideChangeEnd = this.onSlideChangeEnd.bind(this);
-    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   onSlideChangeStart(name, props, state, newState) {
@@ -118,47 +113,16 @@ class FullpageReact extends React.Component {
     this.setState(updatedState);
   }
 
-  componentDidMount() {
-      Events.scrollEvent.register('begin', function() {
-        console.log("begin", arguments);
-      });
-
-      Events.scrollEvent.register('end', function() {
-        console.log("end", arguments);
-      });
-
-      scrollSpy.update();
-    }
-
-    scrollToTop(options) {
-      scroll.scrollToTop(options);
-    }
-
-    componentWillUnmount() {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    }
-
   render() {
-
-    const {active} = this.state;
-
+    const { active } = this.state;
     const currentActive = active.Fullpage;
-
     const prevSlide = changeFullpageSlide.bind(null, currentActive - 1);
-
     const nextSlide = changeFullpageSlide.bind(null, currentActive + 1);
-
     const goToTop = changeFullpageSlide.bind(null, 0);
-
     const horizontalSliderName = horizontalSliderProps.name;
-
     const horizontalActive = this.state.active[horizontalSliderName];
-
     const prevHorizontalSlide = changeHorizontalSlide.bind(null, horizontalSliderName, horizontalActive - 1);
-
     const nextHorizontalSlide = changeHorizontalSlide.bind(null, horizontalSliderName, horizontalActive + 1);
-
     const topNav = (
       <div style={topNavStyle}>
 
@@ -232,12 +196,12 @@ class FullpageReact extends React.Component {
     const verticalSlides = [
       <Slide>
         <Element name="test1" className='element'>
-          <ScreenOne  />
+          <ScreenOne />
         </Element>
       </Slide>,
       <Slide >
         <Element name="test2" className='element'>
-          <ScreenTwo  />
+          <ScreenTwo />
         </Element>
       </Slide>,
       horizontalSlider,
@@ -250,16 +214,17 @@ class FullpageReact extends React.Component {
 
     fullPageOptions.slides = verticalSlides;
     return (
-      <div>
-      <Fullpage
-        onSlideChangeStart={this.onSlideChangeStart}
-        onSlideChangeEnd={this.onSlideChangeEnd}
-        {...fullPageOptions}
-        >
-          <Menu />
-        {/* {topNav} */}
-      </Fullpage>
-    </div>
+      <div id="scroll-container">
+        <Menu />
+        <Fullpage
+          onSlideChangeStart={this.onSlideChangeStart}
+          onSlideChangeEnd={this.onSlideChangeEnd}
+          {...fullPageOptions}
+          >
+
+          {/* {topNav} */}
+        </Fullpage>
+      </div>
     );
   }
 }
