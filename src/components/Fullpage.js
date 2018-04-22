@@ -6,7 +6,8 @@ import ScreenThree from './ScreenThree';
 import ScreenFour from './ScreenFour';
 import ScreenThreeOne from './HorizontalScreens/ScreenThree_One';
 import * as Scroll from 'react-scroll';
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import Menu from './Menu';
 
 const {changeFullpageSlide, changeHorizontalSlide} = Fullpage;
 
@@ -185,22 +186,24 @@ class FullpageReact extends React.Component {
     const horizontalNav = (<div id='horizontal-nav' style={horizontalNavStyle}>
 
       <span onClick={prevHorizontalSlide}>
-        <button><i class="fas fa-chevron-left"></i></button>
+        <button><i className="fas fa-chevron-left"></i></button>
       </span>
 
       <span style={{
           position: 'absolute',
           right: '0px'
         }} onClick={nextHorizontalSlide}>
-        <button><i class="fas fa-chevron-right"></i></button>
+        <button><i className="fas fa-chevron-right"></i></button>
       </span>
 
     </div>);
 
     const horizontalSlides = [
-      <Slide name='test3' className='no-flick'>
-        <ScreenThree />
-      </Slide>,
+      <Slide className='no-flick'>
+      <Element name="test3" className='element'>
+          <ScreenThree />
+      </Element>
+    </Slide>,
 
       <Slide className='no-flick' style={{
           backgroundColor: 'lightGrey'
@@ -227,27 +230,36 @@ class FullpageReact extends React.Component {
     const horizontalSlider = <HorizontalSlider id='horizontal-slider-1' {...horizontalSliderProps}>{horizontalNav}</HorizontalSlider>;
 
     const verticalSlides = [
-      <Slide >
-        <ScreenOne />
+      <Slide>
+        <Element name="test1" className='element'>
+          <ScreenOne  />
+        </Element>
       </Slide>,
       <Slide >
-        <ScreenTwo  />
+        <Element name="test2" className='element'>
+          <ScreenTwo  />
+        </Element>
       </Slide>,
       horizontalSlider,
-      <Slide>
-        <ScreenFour  />
+      <Slide >
+        <Element name="test4" className='element'>
+          <ScreenFour />
+        </Element>,
       </Slide>
     ];
 
     fullPageOptions.slides = verticalSlides;
     return (
+      <div>
       <Fullpage
         onSlideChangeStart={this.onSlideChangeStart}
         onSlideChangeEnd={this.onSlideChangeEnd}
         {...fullPageOptions}
         >
+          <Menu />
         {/* {topNav} */}
       </Fullpage>
+    </div>
     );
   }
 }

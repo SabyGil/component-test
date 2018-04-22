@@ -3,7 +3,7 @@ import './App.css';
 import { Fade } from 'reactstrap';
 // import * as Scroll from 'react-scroll';
 // import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import Menu from './components/Menu';
+// import Menu from './components/Menu';
 import FullpageReact from './components/Fullpage';
 
 
@@ -34,10 +34,10 @@ class App extends Component {
     // console.log(this.state)
     // console.table(this.state);
     return (
-      <div>
-        <Menu self={ this }/>
+      <div id="scroll-container">
+        {/* <Menu self={ this }/> */}
         <FullpageReact  />
-        <div id="scroll-container" className='for-media'></div>
+        <div  className='for-media'></div>
      </div>
     );
   }

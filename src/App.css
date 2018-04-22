@@ -143,15 +143,13 @@ ul li:nth-child(2) {
 /* TempTwo styles */
 
 .element {
-	/* height: 840px; */
-  /* height: 100vh; */
-	/* background-color: #ededed; */
-	font-size: 45px;
+	height: 100%;
+  opacity: .8;
+	background-color: #ededed;
 	border-top:1px solid #000;
-	padding-top:55px;
-	padding-left:10px;
-  z-index: 1;
-  /* border: 5px solid green; */
+  overflow-y: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .active {
@@ -160,10 +158,12 @@ ul li:nth-child(2) {
 
 #scroll-container {
   /* margin-top: 99px; */
+  /* border: 10px solid red; */
   /* height: 100vh; */
-/* overflow: visible!important; */
-/* visibility: visible!important; */
+ /* overflow: visible!important; */
+ /* visibility: visible!important; */
   /* overflow: hidden; */
+  height: 100%;
 }
 
 /* /TempTwo sty/es */
