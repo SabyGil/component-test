@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "fullpage-react": "^3.0.31",
     "npm": "^5.7.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-owl-carousel": "^2.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
+    "react-scroll": "^1.7.7",
     "reactstrap": "^5.0.0-beta.2"
   },
   "scripts": {

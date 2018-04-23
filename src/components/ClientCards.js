@@ -34,7 +34,7 @@ import { Card, CardImg, CardText, CardBody,
               <CardTitle>{client.proj}</CardTitle>
               <CardSubtitle>{client.who}</CardSubtitle>
               <CardText>{client.desc}</CardText>
-              <Button>Learn More</Button>
+              <Button>Client Work</Button>
             </CardBody>
           </Card>
       )
