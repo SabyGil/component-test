@@ -1,11 +1,7 @@
 import React from 'react';
 // import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 // import { DropdownMenu, DropdownToggle, Dropdown, MenuItem, CustomToggle, CustomMenu } from "react-bootstrap/lib";
-
-const durationFn = function(deltaTop) {
-  return deltaTop;
-};
 
 class Menu extends React.Component {
   constructor(props){
@@ -46,9 +42,8 @@ class Menu extends React.Component {
     return (
       <nav className="menuTest">
         <Link activeClass="active" className="logo" to="test1"  spy={true} duration={600} smooth={true}>
-          link
           <div>
-            <img src='http://www.freepngimg.com/download/alien/8-2-alien-png-image.png' alt='' className='alien-logo' />
+            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Alien01.svg/2000px-Alien01.svg.png' alt='' className='alien-logo'/>
           </div>
         </Link>
         <ul className="">
