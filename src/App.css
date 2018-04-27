@@ -1,10 +1,18 @@
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  font-size: 4rem;
 }
 
 @media only screen and (max-width: 767px) {
@@ -37,27 +45,50 @@ body {
 
 }
 
-/* Header */
-ul {
-  list-style: none;
+/* Header/menu styles */
+
+.menuTest {
+  /* position: relative; */
+  font-size: 4rem;
 }
 
-ul.navbar-nav {
-  border: 5px solid red;
+.menuTest .logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.menuTest ul {
+  width: 100%;
   display: flex;
-   flex-direction: row;
-   position: fixed;
-   z-index: 103;
-   width: 100vw;
-   left: 0;
-   right: 0;
-   background: transparent;
-   color: gold;
-   overflow: auto;
+  flex-direction: row;
+  position: fixed;
+  z-index: 2;
+  color: gold;
+  align-items: center;
 }
 
-ul li:nth-child(2) {
-  margin-left: auto;
+.menuTest ul div {
+  margin: 0 20px 0 auto;
+}
+
+.alien-logo {
+  height: 100px;
+}
+
+[aria-expanded='true'] ~  .menu-list{
+  position: absolute;
+  right: 0;
+}
+
+[aria-expanded='false'] ~  .menu-list {
+  display: none;
 }
 
 /* /Header */
@@ -71,6 +102,7 @@ ul li:nth-child(2) {
   justify-content: center;
   align-items: center;
   height: 100%;
+  font-size: 2rem;
 }
 
 .view-container .header-content .owl-theme{
@@ -161,8 +193,6 @@ ul li:nth-child(2) {
   /* height: 100%; */
 }
 
-/* /TempTwo sty/es */
-
 /* OwlCarousel styles */
 
 .item {
@@ -205,6 +235,8 @@ div.owl-prev {
 
 /* /OwlCarousel styles */
 
+/* Contact form */
+
 .view-container .contact-container {
   width: 100%;
 }
@@ -225,81 +257,3 @@ div.owl-prev {
   text-align: center;
   margin-top: 3rem;
 }
-
-/* menu styles */
-.menuTest {
-  position: relative;
-  font-size: 1.7rem;
-}
-
-.menuTest ul {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  z-index: 2;
-  color: gold;
-  align-items: center;
-  margin: 0;
-}
-
-.menuTest button {
-  background: none;
-  border: none;
-  outline: none;
-}
-
-.menuTest button:focus {
-  outline: none;
-}
-
-.menuTest button [aria-controls='menu-list'] .menu-list {
-  border: 10px solid green;
-}
-
-.menuTest .contact-btn, .open {
-  margin-right: 20px;
-  /* padding-right: 20px; */
-}
-
-.menuTest .logo {
-  margin-left: 20px;
-}
-
-[aria-expanded='true'] {
-  /* display: grid; */
-  /* max-width: 500px; */
-}
-
-[aria-expanded='true'] ~  .menu-list{
-  /* display: block; */
-  /* transform: rotateX(0); */
-  /* border: 15px solid red; */
-  position: absolute;
-  /* width: 200px; */
-  right: 0;
-  /* border: 1px solid red; */
-}
-
-[aria-expanded='false'] ~  .menu-list {
-  display: none;
-  border: 1px solid blue;
-}
-
-/* [aria-expanded='false'] .close {
-  display: none;
-} */
-
-[aria-expanded='true'] .close {
-  /* display: inline-block ; */
-}
-
-[aria-expanded='true'] .open {
-  /* display: none; */
-}
-
-/* .no-flick {
-  -webkit-transform:translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  border: 1px solid red;
-} */

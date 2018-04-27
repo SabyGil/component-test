@@ -25,7 +25,7 @@ const fullPageOptions = {
 
   touchSensitivity: 2,
 
-  scrollSpeed: 200,
+  scrollSpeed: 100,
 
   resetSlides: true,
 
@@ -119,10 +119,10 @@ class FullpageReact extends React.Component {
     const prevSlide = changeFullpageSlide.bind(null, currentActive - 1);
     const nextSlide = changeFullpageSlide.bind(null, currentActive + 1);
     const goToTop = changeFullpageSlide.bind(null, 0);
-    const horizontalSliderName = horizontalSliderProps.name;
-    const horizontalActive = this.state.active[horizontalSliderName];
-    const prevHorizontalSlide = changeHorizontalSlide.bind(null, horizontalSliderName, horizontalActive - 1);
-    const nextHorizontalSlide = changeHorizontalSlide.bind(null, horizontalSliderName, horizontalActive + 1);
+    // const horizontalSliderName = horizontalSliderProps.name;
+    // const horizontalActive = this.state.active[horizontalSliderName];
+    // const prevHorizontalSlide = changeHorizontalSlide.bind(null, horizontalSliderName, horizontalActive - 1);
+    // const nextHorizontalSlide = changeHorizontalSlide.bind(null, horizontalSliderName, horizontalActive + 1);
     const topNav = (
       <div style={topNavStyle}>
 
@@ -147,51 +147,51 @@ class FullpageReact extends React.Component {
       </div>
     );
 
-    const horizontalNav = (<div id='horizontal-nav' style={horizontalNavStyle}>
+    // const horizontalNav = (<div id='horizontal-nav' style={horizontalNavStyle}>
+    //
+    //   <span onClick={prevHorizontalSlide}>
+    //     <button><i className="fas fa-chevron-left"></i></button>
+    //   </span>
+    //
+    //   <span style={{
+    //       position: 'absolute',
+    //       right: '0px'
+    //     }} onClick={nextHorizontalSlide}>
+    //     <button><i className="fas fa-chevron-right"></i></button>
+    //   </span>
+    //
+    // </div>);
 
-      <span onClick={prevHorizontalSlide}>
-        <button><i className="fas fa-chevron-left"></i></button>
-      </span>
+    // const horizontalSlides = [
+    //   <Slide className='no-flick'>
+    //   <Element name="test3" className='element'>
+    //       <ScreenThree />
+    //   </Element>
+    // </Slide>,
+    //
+    //   <Slide className='no-flick' style={{
+    //       backgroundColor: 'lightGrey'
+    //     }}>
+    //     <ScreenThreeOne />
+    //   </Slide>,
+    //
+    //   <Slide className='no-flick' style={{
+    //       backgroundColor: 'green'
+    //     }}>
+    //     <p>Horizontal 3</p>
+    //   </Slide>,
+    //
+    //   <Slide style={{
+    //       backgroundColor: 'lightGrey'
+    //     }}>
+    //     <p>Horizontal 4</p>
+    //   </Slide>
+    //
+    // ];
 
-      <span style={{
-          position: 'absolute',
-          right: '0px'
-        }} onClick={nextHorizontalSlide}>
-        <button><i className="fas fa-chevron-right"></i></button>
-      </span>
-
-    </div>);
-
-    const horizontalSlides = [
-      <Slide className='no-flick'>
-      <Element name="test3" className='element'>
-          <ScreenThree />
-      </Element>
-    </Slide>,
-
-      <Slide className='no-flick' style={{
-          backgroundColor: 'lightGrey'
-        }}>
-        <ScreenThreeOne />
-      </Slide>,
-
-      <Slide className='no-flick' style={{
-          backgroundColor: 'green'
-        }}>
-        <p>Horizontal 3</p>
-      </Slide>,
-
-      <Slide style={{
-          backgroundColor: 'lightGrey'
-        }}>
-        <p>Horizontal 4</p>
-      </Slide>
-
-    ];
-
-    horizontalSliderProps.slides = horizontalSlides;
-
-    const horizontalSlider = <HorizontalSlider id='horizontal-slider-1' {...horizontalSliderProps}>{horizontalNav}</HorizontalSlider>;
+    // horizontalSliderProps.slides = horizontalSlides;
+    //
+    // const horizontalSlider = <HorizontalSlider id='horizontal-slider-1' {...horizontalSliderProps}>{horizontalNav}</HorizontalSlider>;
 
     const verticalSlides = [
       <Slide>
@@ -204,7 +204,7 @@ class FullpageReact extends React.Component {
           <ScreenTwo />
         </Element>
       </Slide>,
-      horizontalSlider,
+      // horizontalSlider,
       <Slide >
         <Element name="test4" className='element'>
           <ScreenFour />
