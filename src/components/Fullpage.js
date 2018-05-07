@@ -1,15 +1,18 @@
 import React from 'react';
-import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
+// import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
+import { Fullpage, Slide } from 'fullpage-react';
+import MainScreen from './MainScreen';
 import ScreenOne from './ScreenOne';
 import ScreenTwo from './ScreenTwo';
-import ScreenThree from './ScreenThree';
+// import ScreenThree from './ScreenThree';
 import ScreenFour from './ScreenFour';
-import ScreenThreeOne from './HorizontalScreens/ScreenThree_One';
+// import ScreenThreeOne from './HorizontalScreens/ScreenThree_One';
 
 import { Element } from 'react-scroll';
 import Menu from './Menu';
 
-const {changeFullpageSlide, changeHorizontalSlide} = Fullpage;
+// const {changeFullpageSlide, changeHorizontalSlide} = Fullpage;
+const { changeFullpageSlide } = Fullpage;
 
 const fullPageOptions = {
 
@@ -40,21 +43,13 @@ const fullPageOptions = {
 };
 
 const topNavStyle = {
-
   textAlign: 'center',
-
   position: 'fixed',
-
   width: '100%',
-
   cursor: 'pointer',
-
   zIndex: 10,
-
   backgroundColor: 'rgba(255, 255, 255, 0.4)',
-
   top: '0px'
-
 };
 
 const horizontalNavStyle = {
@@ -194,6 +189,11 @@ class FullpageReact extends React.Component {
     // const horizontalSlider = <HorizontalSlider id='horizontal-slider-1' {...horizontalSliderProps}>{horizontalNav}</HorizontalSlider>;
 
     const verticalSlides = [
+      <Slide>
+        <Element>
+          <MainScreen />
+        </Element>
+      </Slide>,
       <Slide>
         <Element name="test1" className='element'>
           <ScreenOne />
