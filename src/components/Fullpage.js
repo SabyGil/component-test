@@ -28,7 +28,7 @@ const fullPageOptions = {
 
   touchSensitivity: 2,
 
-  scrollSpeed: 100,
+  scrollSpeed: 300,
 
   resetSlides: true,
 
@@ -215,7 +215,7 @@ class FullpageReact extends React.Component {
     fullPageOptions.slides = verticalSlides;
     return (
       <div id="scroll-container">
-        <Menu />
+        <Menu activePage={this.state.active.Fullpage}/>
         <Fullpage
           onSlideChangeStart={this.onSlideChangeStart}
           onSlideChangeEnd={this.onSlideChangeEnd}

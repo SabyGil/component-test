@@ -39,12 +39,16 @@ class Menu extends React.Component {
 
   render(){
     // const navButton = document.querySelectorAll('button[aria-expanded]');
+    let activePage = this.props.activePage
     return (
       <nav className="menuTest">
         <Link activeClass="active" className="logo" to="test1"  spy={true} duration={600} smooth={true}>
           <div>
+            {activePage === 0 ? '' :
             <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Alien01.svg/2000px-Alien01.svg.png' alt='' className='alien-logo'/>
+          }
           </div>
+
         </Link>
         <ul className="">
           <div>
